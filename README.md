@@ -1,1 +1,1 @@
-# project-1-Cortex-ChatGpt-clone
+# project-Cortex-ChatGpt-clone
