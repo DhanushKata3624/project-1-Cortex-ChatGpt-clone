@@ -1,6 +1,6 @@
 import streamlit as st
 
-from services.get_models_list import get_ollama_models_list
+from services.get_models_list import get_groq_models_list
 from services.get_title import get_chat_title
 from services.chat_utilities import get_answer
 from db.conversations import (
@@ -228,10 +228,10 @@ st.markdown(
 # =====================================================================
 # MODELS
 # =====================================================================
-if "OLLAMA_MODELS" not in st.session_state:
-    st.session_state.OLLAMA_MODELS = get_ollama_models_list()
+if "GROQ_MODELS" not in st.session_state:
+    st.session_state.GROQ_MODELS = get_groq_models_list()
 
-selected_model = st.selectbox("⚙️ Select Model", st.session_state.OLLAMA_MODELS)
+selected_model = st.selectbox("⚙️ Select Model", st.session_state.GROQ_MODELS)
 
 # =====================================================================
 # SESSION STATE

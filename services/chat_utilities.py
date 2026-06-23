@@ -1,9 +1,9 @@
 from llama_index.core.llms import ChatMessage, MessageRole
 
-from llm_factory.get_llm import get_ollama_llm
+from llm_factory.get_llm import get_groq_llm 
 
 def get_answer(model_name, chat_history):
-    llm = get_ollama_llm(model_name)
+    llm = get_groq_llm(model_name)
 
     # Always prepend a system message
     messages = [

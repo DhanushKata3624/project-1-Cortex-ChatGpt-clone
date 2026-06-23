@@ -1,10 +1,10 @@
 from llama_index.core import PromptTemplate
 
-from llm_factory.get_llm import get_ollama_llm
+from llm_factory.get_llm import get_groq_llm 
 
 
 def get_chat_title(model, user_query):
-    llm = get_ollama_llm(model)
+    llm = get_groq_llm(model)
     title_prompt_template = ("You are a helpful assistant that generates short, clear, and catchy titles.\n\n"
                        "Task:\n- Read the given user query.\n- Create a concise title (max 7 words).\n"
                        "- The title should summarize the intent of the query.\n"
